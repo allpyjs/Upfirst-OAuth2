@@ -1,18 +1,9 @@
-# Upfirst-OAuth2
+# Upfirst-OAuth2 Home Task
 
 # JWT Authentication API
 
-This project provides a simple JWT authentication mechanism using Express.js. It includes the following functionalities:
-
 1. **Generate a JWT Token**: The `/token` endpoint generates a JWT token when a username is provided.
 2. **Protected Route**: The `/protected` endpoint can only be accessed with a valid JWT token.
-
-## Prerequisites
-
-Before running the tests, ensure the following:
-
-- Node.js installed on your machine.
-- The server is running on `http://localhost:3000` (default port).
 
 ### Install Dependencies
 
