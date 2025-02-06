@@ -42,10 +42,11 @@ curl -X POST http://localhost:3000/token -H "Content-Type: application/json" -d 
 This should receive a response with JWT token:
 ```json
     {
-        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNzM4ODU2MzE0LCJleHAiOjE3Mzg4NTk5MTR9.1j3I5TkXwiXE_6lnlj--pDmyGx-WFrGxly5yIQu6nlA",
+        "access_token": "JWT Token",
         "token_type": "Bearer"
     }
 ```
+![Generate Token](./generateToken.png)
 ## 2. Test Protected Route (GET /protected) with a valid token
 ```bash
 curl -X GET http://localhost:3000/protected -H "Authorization: Bearer {access_token}"
@@ -61,6 +62,7 @@ This should receive a response
             }
     }
 ```
+![Test Valid Token](./testValidToken.png)
 ## 3. Test Protected Route (GET /protected) with no token
 
 ```
@@ -79,3 +81,4 @@ This should return a 403 Forbidden response.
 ```bash
     npm test
 ```
+![Unit Test Result](./unitTestResult.png)
